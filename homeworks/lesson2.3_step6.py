@@ -17,7 +17,9 @@ try:
 	pressButton.click()
 
 	# Переключиться на вторую вкладку
-	browser.switch_to.window(browser.window_handles[1])
+	new_window = browser.window_handles[1]
+	browser.switch_to.window(new_window)
+	print (new_window)
 
 	# Посчитать уравнение
 	x_element = browser.find_element_by_id("input_value")
